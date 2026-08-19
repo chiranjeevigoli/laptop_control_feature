@@ -83,3 +83,31 @@ This script is intentionally simple so you can build on it:
   full hand (not just fingertips) is in frame.
 - **Volume feels jumpy** — narrow the `dist_min`/`dist_max` range in
   `set_volume_from_pinch_distance` to match your comfortable pinch range.
+
+
+  Step 1: Start the Tool
+Make sure you have installed the required libraries (pip install -r requirements.txt).
+Open your terminal in the project folder and run:
+bash
+python gesture_control.py
+A video window displaying your webcam stream will open. Ensure you are in a well-lit room and stay about 30 to 60 cm (1 to 2 feet) away from the camera.
+Step 2: The Control Gestures
+1. Adjust Volume (Pinch)
+Gesture: Extend only your thumb and index finger (keeping the other three fingers curled).
+How it works: Spreading them wider increases the volume, and pinching them closer decreases it. A green line will connect your fingers on screen showing the volume level.
+2. Mute / Unmute (Fist)
+Gesture: Close your hand into a fist.
+How it works: Hold the fist for about 0.4 seconds to toggle your system mute.
+3. Open Notepad / Custom App (Two Fingers Up)
+Gesture: Hold your index and middle fingers up (like a peace sign).
+How it works: Sustain this gesture for 1.5 seconds. The program will automatically launch Notepad (or whatever app you set under APP_TO_OPEN).
+4. Close Active Window (Thumbs Down)
+Gesture: Extend only your thumb and point it downward.
+How it works: Sustain this gesture for 1.5 seconds. The tool will simulate pressing Alt + F4 on your keyboard to close whatever window is currently active.
+5. Switch Windows (Open Palm Swipe)
+Gesture: Open your hand fully (palm facing the camera) and swipe left or right.
+How it works:
+Swiping right triggers Alt + Tab to jump to the next window.
+Swiping left triggers Alt + Shift + Tab to go to the previous window.
+Step 3: Exit
+To stop the control tool, click on the camera video window and press the q key on your keyboard.
